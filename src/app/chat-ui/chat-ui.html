@@ -1,0 +1,26 @@
+<div class="chat-container">
+    <!-- Chatbot Header -->
+    <div class="chat-header">
+      <h2>🤖 My Chatbot</h2>
+      <p class="subtitle">Talk to the AI below!</p>
+    </div>
+  
+    <!-- Messages Area -->
+    <div class="messages">
+      <div *ngFor="let msg of messages" [ngClass]="msg.sender">
+        <strong>{{ msg.sender }}:</strong> {{ msg.text }}
+      </div>
+    </div>
+  
+    <!-- Input Area -->
+    <div class="input-area">
+      <input
+        type="text"
+        [(ngModel)]="userInput"
+        (keydown.enter)="sendMessage()"
+        placeholder="Type your message..."
+      />
+      <button (click)="sendMessage()">Send</button>
+    </div>
+  </div>
+  
