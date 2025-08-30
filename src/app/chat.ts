@@ -15,7 +15,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class Chat {
-  private apiUrl = 'http://localhost:3000/chat';
+  // private apiUrl = 'http://localhost:3000/chat';
+    private apiUrl = 'https://cb-backend-vnx2.onrender.com/chat';
 
   constructor(private http: HttpClient) {}
 
