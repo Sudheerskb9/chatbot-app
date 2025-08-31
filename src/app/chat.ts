@@ -10,13 +10,16 @@
 
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from '../../src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class Chat {
   // private apiUrl = 'http://localhost:3000/chat';
-    private apiUrl = 'https://cb-backend-vnx2.onrender.com/chat';
+    // private apiUrl = 'https://cb-backend-vnx2.onrender.com/chat';
+
+    private apiUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) {}
 
